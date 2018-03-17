@@ -1,0 +1,37 @@
+package carvstrain;
+
+import javax.swing.JOptionPane;
+
+public class CarVsTrain 
+{
+
+    public static void main(String[] args) 
+    {
+ 
+        
+        String input = JOptionPane.showInputDialog("What is the distance from your house to your work ");
+        double distance = Integer.parseInt(input);
+        
+        input = JOptionPane.showInputDialog("What is your car's fuel efficency? ");
+        double fuelEfficency = Integer.parseInt(input);
+        
+        input = JOptionPane.showInputDialog("How much is a train ticket?? ");
+        double trainTicket = Integer.parseInt(input);
+        
+        double carGallons = (distance / fuelEfficency);
+        double carMaintenance = (distance * .05);
+        double costOfGas = carGallons * 4;
+        double carTotal = costOfGas + carMaintenance;
+        
+        System.out.println("It costs $" + carTotal + " to drive to work." );
+        System.out.println("It costs $" + trainTicket + " to take the train." );
+        
+        if (carTotal > trainTicket)
+        {
+            System.out.println("Take the Train!");
+        }
+        else
+             System.out.println("Drive!");
+    }
+    
+}
